@@ -288,3 +288,11 @@ body.lb-open { overflow: hidden; }
 .chapters button:hover { color: var(--accent); }
 .ch-t { color: var(--accent); font-variant-numeric: tabular-nums; min-width: 3.5rem; }
 .press-imgs .video a.video-poster { max-width: none; flex: none; border: 0; cursor: pointer; }
+
+/* travels */
+.trips { list-style: none; padding: 0; margin: 2rem 0 4rem; }
+.trips .tr-year span { display: inline-block; font-family: var(--font-display); font-size: 1.8rem; color: var(--accent); margin: 2rem 0 .5rem; }
+.trip { display: grid; grid-template-columns: 2.5rem 1fr; gap: 1rem; padding: 1rem 0; border-top: 1px solid var(--line); }
+.trip h3 { font-family: var(--font-body); font-size: 1.05rem; font-weight: 600; margin: 0 0 .2rem; line-height: 1.5; }
+.trip p { margin: 0 0 .3rem; }
+.tr-n { color: var(--ink-2); font-size: .85rem; padding-top: .2rem; }
