@@ -32,6 +32,27 @@
     if (location.hash.length > 1) applyFilter(decodeURIComponent(location.hash.slice(1)), false);
   }
 
+  // YouTube: show a local thumbnail; load the privacy-enhanced player only when the visitor presses play
+  document.querySelectorAll(".video[data-yt]").forEach(function (fig) {
+    function load(start) {
+      var src = "https://www.youtube-nocookie.com/embed/" + fig.dataset.yt + "?autoplay=1&rel=0" + (start ? "&start=" + start : "");
+      var frame = fig.querySelector(".video-frame");
+      if (!frame) {
+        frame = document.createElement("div");
+        frame.className = "video-frame";
+        var poster = fig.querySelector(".video-poster");
+        poster.parentNode.replaceChild(frame, poster);
+      }
+      frame.innerHTML = '<iframe src="' + src + '" title="' + fig.dataset.title.replace(/"/g, "&quot;") +
+        '" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>';
+    }
+    var poster = fig.querySelector(".video-poster");
+    if (poster) poster.addEventListener("click", function (ev) { ev.preventDefault(); load(0); });
+    fig.querySelectorAll(".chapters button").forEach(function (b) {
+      b.addEventListener("click", function () { load(+b.dataset.start); });
+    });
+  });
+
   // lightbox
   var links = Array.prototype.slice.call(document.querySelectorAll("a[data-lightbox]"));
   if (!links.length) return;
