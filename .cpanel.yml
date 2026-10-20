@@ -1,0 +1,6 @@
+---
+# cPanel "Deploy HEAD Commit" runs these tasks: copy the built site into the subdomain's document root.
+deployment:
+  tasks:
+    - export DEPLOYPATH=$HOME/public_html/mostafa/
+    - /bin/cp -R public/. $DEPLOYPATH
