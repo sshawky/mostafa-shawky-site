@@ -305,3 +305,9 @@ body.lb-open { overflow: hidden; }
 .ext-links a > span:first-child { font-weight: 500; }
 .ext-links a > span:first-child::after { content: " ↗"; color: var(--accent); }
 .ext-host { direction: ltr; text-align: start; }
+
+/* project references */
+.refs { margin-top: 2.5rem; }
+.refs h2 { font-size: 1.35rem; }
+.refs ol { padding-inline-start: 1.2rem; font-size: .9rem; color: var(--ink-2); }
+.refs li { margin-bottom: .5rem; }
