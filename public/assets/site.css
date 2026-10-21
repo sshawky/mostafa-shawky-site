@@ -296,3 +296,12 @@ body.lb-open { overflow: hidden; }
 .trip h3 { font-family: var(--font-body); font-size: 1.05rem; font-weight: 600; margin: 0 0 .2rem; line-height: 1.5; }
 .trip p { margin: 0 0 .3rem; }
 .tr-n { color: var(--ink-2); font-size: .85rem; padding-top: .2rem; }
+
+/* external links */
+.links-group { margin: 2rem 0; }
+.links-group h2 { font-size: 1.35rem; }
+.ext-links { list-style: none; padding: 0; margin: 0; border-top: 1px solid var(--line); }
+.ext-links a { display: flex; flex-direction: column; gap: .15rem; padding: .9rem 0; border-bottom: 1px solid var(--line); text-decoration: none; }
+.ext-links a > span:first-child { font-weight: 500; }
+.ext-links a > span:first-child::after { content: " ↗"; color: var(--accent); }
+.ext-host { direction: ltr; text-align: start; }
