@@ -311,3 +311,5 @@ body.lb-open { overflow: hidden; }
 .refs h2 { font-size: 1.35rem; }
 .refs ol { padding-inline-start: 1.2rem; font-size: .9rem; color: var(--ink-2); }
 .refs li { margin-bottom: .5rem; }
+.callout { background: var(--paper-2); border: 1px solid var(--line); border-radius: var(--radius); padding: clamp(1.5rem, 4vw, 2.5rem); }
+.callout p:last-child { margin-bottom: 0; }
